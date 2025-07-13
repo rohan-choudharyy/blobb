@@ -1,7 +1,8 @@
 import { useState, useCallback } from "react";
 import { toPng } from "html-to-image";
+import type { GradientColors, BlobOptions, BlobState } from '@/types/blob';
 
-const useExport = () => {
+ export const useExport = () => {
     const [isExporting, setIsExporting] = useState(false);
 
     const exportAsPNG = useCallback(async (element: HTMLElement | null) => {
